@@ -1,8 +1,8 @@
-const Meds = require("../database/Meds");
+const Events = require("../database/db");
 
 const getAllVisitors = (res) => {
   try {
-    const allVisitors = Meds.getAllVisitors(res);
+    const allVisitors = Events.getAllVisitors(res);
     return allVisitors;
   } catch (error) {
     throw error;
@@ -11,7 +11,7 @@ const getAllVisitors = (res) => {
 
 const getEventVisitors = (res, id) => {
   try {
-    const eventVisitors = Meds.getEventVisitors(res, id);
+    const eventVisitors = Events.getEventVisitors(res, id);
     return eventVisitors;
   } catch (error) {
     throw error;
@@ -20,7 +20,7 @@ const getEventVisitors = (res, id) => {
 
 const getEventVisitorr = (res, id, email) => {
   try {
-    const eventVisitors = Meds.getEventVisitorr(res, id, email);
+    const eventVisitors = Events.getEventVisitorr(res, id, email);
     return eventVisitors;
   } catch (error) {
     throw error;
@@ -28,7 +28,7 @@ const getEventVisitorr = (res, id, email) => {
 };
 const postVisitor = (res, body) => {
   try {
-    const eve = Meds.postVisitor(res, body);
+    const eve = Events.postVisitor(res, body);
     return eve;
   } catch (error) {
     throw error;
@@ -37,7 +37,7 @@ const postVisitor = (res, body) => {
 
 const getAllEvents = (res) => {
   try {
-    const allEvents = Meds.getAllEvents(res);
+    const allEvents = Events.getAllEvents(res);
     return allEvents;
   } catch (error) {
     throw error;
